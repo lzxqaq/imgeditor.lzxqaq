@@ -9,7 +9,7 @@
   let slider = document.querySelectorAll('.slider');
   let show_value = document.querySelectorAll('.show_value');
 
-  let list_options = document.querySelectorAll('ul li');
+  let list_options = document.querySelectorAll('#li_options');
 
   let options = document.querySelector('.options');
   let option = document.querySelectorAll('.option');
@@ -81,6 +81,8 @@
 	let blurVal = blur.value;
 	let hueVal = hue.value;
 	let satuVal = saturation.value;
+
+	blurVal = blurVal / 4;
 
 	brightValShow.innerHTML = brightVal;
 	blurValShow.innerHTML = blurVal;

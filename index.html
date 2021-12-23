@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PHOTO EDITOR</title>
+	<title>图片编辑</title>
 	<link rel="stylesheet" href="style.css">
 	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,89 +22,89 @@
 
 	<div class="main">
 		
-      <div class="Tools">
-      	<ul>
-      		<li>
-      			<i class='bx bxs-brightness-half'></i>
-      			<p>亮度</p>
-      		</li>
-      		<li>
-      			<i class='bx bxs-brush' ></i>
-      			<p>模糊</p>
-      		</li>
-      		<li>
-      			<i class='bx bxs-collection' ></i>
-      			<p>灰阶</p>
-      		</li>
-      		<li>
-      			<i class='bx bxs-color-fill' ></i>
-      			<p>色调旋转</p>
-      		</li>
-      		<li>
-      			<i class='bx bxs-magic-wand' ></i>
-      			<p>饱和</p>
-      		</li>
-      		<li onclick="Download_btn()">
-      			<i class='bx bx-export' ></i>
-      			<p>导出</p>
-      		</li>
-      	</ul>
-      </div>
-
-      <div class="content">
-      	<p id="logo">Photo Editor</p>
-
-      	<div class="choose_image">
-      		<div class="upload_img_box">
-      			<i class='bx bxs-image-add' ></i><br>
-      			<input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png">
-      			<p id="hint">选择一张照片</p>
-      		</div>
-      	</div>
-
-      	<canvas id="image_canvas"></canvas>
-        
-        <div class="image_holder">
-        	<button id="remove_img_btn"><i class='bx bxs-message-square-x' ></i></button>
-        	<img src="" alt="img" id="image">
-        </div>
-
-        <div class="options">
-        	
-          <div class="option">
-          	<input type="range" max="200" min="0" value="100" id="brightness" class="slider">
-          	<p id="brightVal" class="show_value">100</p>
-          </div>
-
-           <div class="option">
-          	<input type="range" max="40" min="0" value="0" id="blur" class="slider">
-          	<p id="blurVal" class="show_value">0</p>
-          </div>
-
-           <div class="option">
-          	<input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
-          	<p id="greyVal" class="show_value">0</p>
-          </div>
-
-           <div class="option">
-          	<input type="range" max="100" min="0" value="0" id="hue" class="slider">
-          	<p id="hueVal" class="show_value">0</p>
-          </div>
-
-           <div class="option">
-          	<input type="range" max="100" min="1" value="1" id="saturation" class="slider">
-          	<p id="saturationVal" class="show_value">1</p>
-          </div>
-
-        </div>
-
-        <button id="clearAll"><span>Reset</span><i class='bx bx-reset' ></i></button>
-
-      </div>
-
-	</div>
-
-	<script src="main.js"></script>
-	
-</body>
-</html>
+		<div class="Tools">
+			<ul>
+				<li id="li_options">
+					<i class='bx bxs-brightness-half'></i>
+					<p>亮度</p>
+				</li>
+				<li id="li_options">
+				  <i class='bx bxs-brush' ></i>
+					<p>模糊</p>
+				</li>
+				<li id="li_options">
+				  <i class='bx bxs-collection' ></i>
+					<p>灰阶</p>
+				</li>
+				<li id="li_options">
+				  <i class='bx bxs-color-fill' ></i>
+					<p>色调旋转</p>
+				</li>
+				<li id="li_options">
+				  <i class='bx bxs-magic-wand' ></i>
+					<p>饱和</p>
+				</li>
+				<li id="li_options" onclick="Download_btn()">
+					<i class='bx bx-export' ></i>
+					<p>导出</p>
+				</li>
+			</ul>
+		</div>
+  
+		<div class="content">
+			<p id="logo">Photo Editor</p>
+  
+			<div class="choose_image">
+				<div class="upload_img_box">
+					<i class='bx bxs-image-add' ></i><br>
+					<input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png">
+					<p id="hint">choose Image from folder</p>
+				</div>
+			</div>
+  
+			<canvas id="image_canvas"></canvas>
+		  
+		  <div class="image_holder">
+			  <button id="remove_img_btn"><i class='bx bxs-message-square-x' ></i></button>
+			  <img src="" alt="img" id="image">
+		  </div>
+  
+		  <div class="options">
+			  
+			<div class="option">
+				<input type="range" max="200" min="0" value="100" id="brightness" class="slider">
+				<p id="brightVal" class="show_value">100</p>
+			</div>
+  
+			 <div class="option">
+				<input type="range" max="40" min="0" value="0" id="blur" class="slider">
+				<p id="blurVal" class="show_value">0</p>
+			</div>
+  
+			 <div class="option">
+				<input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
+				<p id="greyVal" class="show_value">0</p>
+			</div>
+  
+			 <div class="option">
+				<input type="range" max="100" min="0" value="0" id="hue" class="slider">
+				<p id="hueVal" class="show_value">0</p>
+			</div>
+  
+			 <div class="option">
+				<input type="range" max="100" min="1" value="1" id="saturation" class="slider">
+				<p id="saturationVal" class="show_value">1</p>
+			</div>
+  
+		  </div>
+  
+		  <button id="clearAll"><span>Reset</span><i class='bx bx-reset' ></i></button>
+  
+		</div>
+  
+	  </div>
+  
+	  <script src="main.js"></script>
+	  
+  </body>
+  </html>
